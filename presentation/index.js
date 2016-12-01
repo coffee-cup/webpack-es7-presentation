@@ -22,6 +22,8 @@ import {
   Text
 } from 'spectacle';
 
+import markdown from './markdown';
+
 // Import image preloader util
 import preloader from 'spectacle/lib/utils/preloader';
 
@@ -68,6 +70,15 @@ class Presentation extends React.Component {
                             Async/Await
                         </Heading>
                     </Slide>
+
+                    {Object.keys(markdown).map((mark) => {
+                        const body = markdown[mark];
+                        return (
+                            <Slide transition={['slide']} bgColor='primary' className="mark" key={mark}>
+                                <Markdown source={body} />
+                            </Slide>
+                        );
+                    })}
 
                     <Slide transition={['slide']} bgColor='primary'>
 

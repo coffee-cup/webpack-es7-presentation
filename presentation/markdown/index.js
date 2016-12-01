@@ -1,3 +1,9 @@
-
 import title from './title.md';
-import
+import second from './second.md';
+
+const markdown = {
+    title,
+    second
+};
+
+export default markdown;

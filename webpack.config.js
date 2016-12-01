@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
-const buildDir = 'build';
 const isProd = process.env.NODE_ENV === 'production';
 
 const config = {
@@ -12,9 +11,8 @@ const config = {
         './index'
     ],
     output: {
-        path: path.join(__dirname, buildDir),
-        filename: 'bundle.js',
-        publicPath: 'public'
+        path: path.join(__dirname, '/build'),
+        filename: 'bundle.js'
     },
     plugins: [
         new WebpackNotifierPlugin()
@@ -89,8 +87,7 @@ if (isProd) {
         historyApiFallback: true
     };
     config.plugins = config.plugins.concat([
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.HotModuleReplacementPlugin()
     ]);
 }
 
