@@ -1,6 +1,6 @@
 # Webpack 2 & ES7 Async/Await
 
-Built with [Spectacle](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown)
+[Available here](https://webpack-es7-presentation.surge.sh/). Built with [Spectacle](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown)
 
 ## Development
 
