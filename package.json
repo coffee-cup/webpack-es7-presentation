@@ -1,13 +1,13 @@
 {
-  "name": "presentation-template",
+  "name": "webpack-es7-presentation",
   "version": "1.0.0",
   "description": "Spectacle Powered Presentation Template",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js && cp -r public/ build",
-    "pre-deploy": "npm run clean && npm run build",
-    "deploy": "surge build/ https://coffee-cup-presentation-template.surge.sh",
+    "predeploy": "npm run clean && npm run build",
+    "deploy": "surge build/ https://webpack-es7-presentation.surge.sh",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --progress"
   },
   "author": "",
@@ -25,7 +25,6 @@
     "autoprefixer-core": "^6.0.1",
     "babel-core": "^6.4.0",
     "babel-loader": "^6.2.1",
-    "babel-plugin-react-transform": "^2.0.2",
     "babel-polyfill": "^6.3.14",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
