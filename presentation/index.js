@@ -15,20 +15,19 @@ import {
   Link,
   ListItem,
   List,
-  Markdown,
   Quote,
   Slide,
   Spectacle,
   Text
 } from 'spectacle';
 
-import markdown from './markdown';
-
 // Import image preloader util
 import preloader from 'spectacle/lib/utils/preloader';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
+
+import markdown from './markdown';
 
 // Import custom component
 // import Interactive from '../assets/interactive';
@@ -47,10 +46,11 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-    primary: 'red',
-    secondary: 'blue'
+    primary: '#F4F4F4',
+    secondary: '#333333',
+    quartenary: '#333333'
 }, {
-    primary: 'Fira Mono',
+    primary: 'Merriweather',
     secondary: { name: 'Fira Mono', googleFont: true, styles: ['400', '700'] }
 });
 
@@ -58,34 +58,38 @@ class Presentation extends React.Component {
     render() {
         return (
             <Spectacle theme={theme}>
-                <Deck transition={['slide']} transitionDuration={500}>
-                    <Slide transition={['slide']} bgColor='primary'>
-                        <Heading size={4} lineHeight={1} textColor='#4A4A4A'>
-                            webpack 2
+                <Deck
+                    transition={['slide']}
+                    transitionDuration={500}
+                    bgColor='background'
+                    progress='bar'>
+                    <Slide>
+                        <Heading size={4} lineHeight={1.5} textColor='secondary'>
+                            webpack Ⅱ
                         </Heading>
-                        <Heading size={5}>
+                        <Heading size={6} lineHeight={1.5} textColor='secondary'>
                             &
                         </Heading>
-                        <Heading size={2} caps lineHeight={1} textColor='black'>
-                            Async/Await
+                        <Heading size={4} lineHeight={1.5} textColor='secondary'>
+                            async / await
                         </Heading>
                     </Slide>
 
-                    {Object.keys(markdown).map((mark) => {
-                        const body = markdown[mark];
-                        return (
-                            <Slide transition={['slide']} bgColor='primary' className="mark" key={mark}>
-                                <Markdown source={body} />
-                            </Slide>
-                        );
-                    })}
+                    <Slide className='title'>
+                        <div className='content' dangerouslySetInnerHTML={{__html: markdown.title}}></div>
+                    </Slide>
 
-                    <Slide transition={['slide']} bgColor='primary'>
+                    <Slide className='second'>
+                        <div className='markdown-body' dangerouslySetInnerHTML={{__html: markdown.second}}></div>
+                    </Slide>
 
+                    <Slide className='footer'>
                         <Link href='https://github.com/FormidableLabs/spectacle'>
-                            <Text bold caps textColor='tertiary'>View on Github</Text>
+                            <Text textColor='secondary'>Footer</Text>
                         </Link>
                     </Slide>
+
+
                 </Deck>
             </Spectacle>
         );

@@ -13,10 +13,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.13.0",
     "normalize.css": "3.0.3",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "spectacle": "^1.0.0"
+    "sass-loader": "^4.0.2",
+    "spectacle": "^1.2.5"
   },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
@@ -33,7 +36,8 @@
     "eslint": "^3.11.1",
     "eslint-plugin-react": "^6.7.1",
     "file-loader": "^0.8.4",
-    "html-loader": "^0.4.0",
+    "highlight-loader": "^0.7.2",
+    "html-loader": "^0.4.4",
     "is-buffer": "^1.1.1",
     "markdown-loader": "^0.1.7",
     "node-libs-browser": "^0.5.3",

@@ -24,7 +24,7 @@ const config = {
         }],
         loaders: [{
             test: /\.md$/,
-            loader: 'html-loader!markdown-loader?gfm=false'
+            loader: 'html!highlight!markdown?gfm=true&smartpants=true'
         }, {
             test: /\.(js|jsx)$/,
             exclude: /node_modules/,
@@ -44,8 +44,8 @@ const config = {
                 }
             }
         }, {
-            test: /\.css$/,
-            loaders: ['style', 'raw'],
+            test: /\.(css|scss)$/,
+            loaders: ['style-loader', 'css-loader', 'sass-loader'],
             include: __dirname
         }, {
             test: /\.svg$/,
