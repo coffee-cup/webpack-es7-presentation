@@ -1,4 +1,6 @@
-# The Configuration File
+## What does it look like?
+
+**webpack.config.js**
 
 ```javascript
 var webpack = require('webpack');

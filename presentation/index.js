@@ -35,6 +35,7 @@ import markdown from './markdown';
 // Require CSS
 require('normalize.css');
 require('spectacle/lib/themes/default/index.css');
+require('../assets/custom.scss');
 
 const images = {
     city: require('../assets/city.jpg'),
@@ -64,19 +65,14 @@ class Presentation extends React.Component {
                     bgColor='background'
                     progress='bar'>
 
-                    <Slide className='title'>
-                        <div className='content' dangerouslySetInnerHTML={{__html: markdown.title}}></div>
-                    </Slide>
-
-                    <Slide className='second'>
-                        <div className='markdown-body' dangerouslySetInnerHTML={{__html: markdown.second}}></div>
-                    </Slide>
-
-                    <Slide className='footer'>
-                        <Link href='https://github.com/FormidableLabs/spectacle'>
-                            <Text textColor='secondary'>Footer</Text>
-                        </Link>
-                    </Slide>
+                    {Object.keys(markdown).map((key) => {
+                        const body = markdown[key];
+                        return (
+                            <Slide key={key} className={key}>
+                                <div className='markdown-body' dangerouslySetInnerHTML={{__html: body}}></div>
+                            </Slide>
+                        );
+                    })}
 
                 </Deck>
             </Spectacle>

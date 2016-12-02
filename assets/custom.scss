@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins';
+
+.title {
+    .markdown-body {
+        h1,
+        h2,
+        h3 {
+            padding: 0;
+            text-align: center;
+        }
+    }
+}
+
+// Text Selection Colour
+::selection {
+    background: $selection; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: $selection; /* Gecko Browsers */
+}
