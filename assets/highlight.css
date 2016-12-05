@@ -2,11 +2,6 @@
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 
-.markdown-body pre,
-.markdown-body code {
-    background: #2D2D2D;
-}
-
 /* Tomorrow Comment */
 .hljs-comment,
 .hljs-quote {

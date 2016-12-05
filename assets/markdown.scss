@@ -1,10 +1,14 @@
 @import 'variables';
 @import 'mixins';
 
+$max-width: 48rem;
+
 .markdown-body {
     h1,
     h2,
     h3,
+    h4,
+    h5,
     p,
     a,
     ul {
@@ -15,7 +19,7 @@
     pre.hljs {
         overflow: scroll;
 
-        max-width: 42rem;
+        max-width: $max-width;
         max-height: 70vh;
         padding: 1rem;
 
@@ -27,7 +31,6 @@
     a,
     a:visited {
         color: $accent;
-        font-size: 2rem;
         @include smart-underline();
 
         -webkit-transition: .15s ease-in;
@@ -181,7 +184,7 @@
     /* === A bit of a gross hack so we can have bleeding divs/blockquotes. */
     p,
     *:not(div):not(img):not(body):not(html):not(li):not(blockquote):not(p) {
-        max-width: 42rem;
+        max-width: $max-width;
         margin: 1rem auto 1rem;
         padding: .25rem;
     }
