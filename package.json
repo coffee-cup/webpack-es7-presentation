@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js && cp -r public/ build",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress && cp -r public/ build",
     "predeploy": "npm run clean && npm run build",
     "deploy": "surge build/ https://webpack-es7-presentation.surge.sh",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --progress"

@@ -1,5 +1,7 @@
 ## What does it look like?
 
+This is the configuration the [Astro Scaffold](https://github.com/mobify/astro-scaffold) currently uses
+
 **webpack.config.js**
 
 ```javascript
@@ -8,25 +10,37 @@ var path = require('path');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 var rootDir = process.cwd();
-var entry = path.resolve(rootDir, 'app.js');
-var outDir = path.resolve(rootDir, 'build');
+var entry = path.resolve(rootDir, 'app/app.js');
+var outDir = path.resolve(rootDir, 'app/build');
 
 var isProd = process.env.NODE_ENV === 'production';
 var analyzeBundle = process.env.ASTRO_ANALYZE === 'true';
 
 var config = {
-    entry: [entry],
+    entry: entry,
     output: {
         filename: 'app.js',
         path: outDir
     },
     resolve: {
         alias: {
-            astro: path.resolve(rootDir, 'vendor/astro/src/'),
-            vendor: path.resolve(rootDir, 'vendor/astro/vendor/'),
-            bluebird: path.resolve(rootDir, '../../node_modules/bluebird')
+            astro: path.resolve(rootDir, 'node_modules/astro-sdk/js/src/'),
+            vendor: path.resolve(rootDir, 'node_modules/astro-sdk/js/vendor/')
         }
     },
+    plugins: [
+        new webpack.optimize.LimitChunkCountPlugin({
+            maxChunks: 1
+        }),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                eslint: {
+                    configFile: path.resolve(__dirname, '.eslintrc.yml'),
+                    formatter: require('eslint/lib/formatters/unix')
+                }
+            }
+        })
+    ],
     module: {
         rules: [{
             test: /\.js$/,
@@ -36,22 +50,12 @@ var config = {
         }, {
             test: /\.js$/,
             use: ['babel-loader'],
-            exclude: /node_modules/
+            include: [
+                path.resolve(rootDir, 'node_modules/astro-sdk/js'),
+                path.resolve(rootDir, 'app')
+            ]
         }]
-    },
-    plugins: [
-        new webpack.optimize.LimitChunkCountPlugin({
-            maxChunks: 1
-        }),
-        new webpack.LoaderOptionsPlugin({
-            options: {
-                eslint: {
-                    configFile: path.resolve(rootDir, '.eslintrc.yml'),
-                    formatter: require('eslint/lib/formatters/unix')
-                }
-            }
-        })
-    ],
+    }
 };
 
 if (isProd) {
@@ -60,7 +64,7 @@ if (isProd) {
         new webpack.optimize.OccurrenceOrderPlugin()
     ]);
 } else {
-    config.devtool = 'eval';
+    config.devtool = 'inline-source-maps';
 }
 
 if (analyzeBundle) {

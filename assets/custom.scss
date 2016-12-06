@@ -1,6 +1,12 @@
 @import 'variables';
 @import 'mixins';
 
+html,
+body,
+p {
+    font-size: 18px;
+}
+
 .title {
     .markdown-body {
         h1,

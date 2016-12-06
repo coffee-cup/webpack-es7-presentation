@@ -1,4 +1,4 @@
-## W5. Rules
+## W5. Rules and Loaders
 
 ```javascript
 module: {

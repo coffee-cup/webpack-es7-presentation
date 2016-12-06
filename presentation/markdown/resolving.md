@@ -2,7 +2,7 @@
 
 By default, local dependencies are imported relative to the current file. NPM dependencies are imported using only their name.
 
-_This is comparable to the [`config.js`](#) file we used with RequireJS._
+_This is comparable to the [config.js](#) file we used with RequireJS._
 
 ```javascript
 resolve: {

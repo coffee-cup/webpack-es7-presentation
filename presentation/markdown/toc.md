@@ -1,7 +1,8 @@
 ## Whats Ahead
 
-- Webpack 2 and why do we need it
-- What does it look like
-- ES6 / ES7 syntax
+- Webpack 2
+- Babel
+- ES6 Syntax
 - Async / Await
-- Removing promises
+- Gotchas
+- Useful Links

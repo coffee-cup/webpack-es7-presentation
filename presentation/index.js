@@ -27,6 +27,10 @@ import preloader from 'spectacle/lib/utils/preloader';
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
 
+require('../assets/custom.scss');
+require('../assets/markdown.scss');
+require('../assets/highlight.css');
+
 import markdown from './markdown';
 
 // Import custom component
@@ -35,7 +39,6 @@ import markdown from './markdown';
 // Require CSS
 require('normalize.css');
 require('spectacle/lib/themes/default/index.css');
-require('../assets/custom.scss');
 
 const images = {
     city: require('../assets/city.jpg'),

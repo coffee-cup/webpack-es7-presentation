@@ -3,7 +3,11 @@ import title from './title.md';
 import toc from './toc.md';
 
 // Webpack
+import webpack2 from './webpack-2.md';
 import whatIsWebpack from './what-is-webpack.md';
+import whatDoesItReplace from './what-does-it-replace.md';
+import whatDoesItDo from './what-does-it-do.md';
+import howIsItInvoked from './how-is-it-invoked.md';
 import whatDoesItLookLike from './what-does-it-look-like.md';
 import stepByStep from './step-by-step.md';
 import configObject from './config-object.md';
@@ -12,8 +16,14 @@ import entryOutput from './entry-output.md';
 import resolving from './resolving.md';
 import rules from './rules.md';
 import plugins from './plugins.md';
+import sourceMaps from './source-maps.md';
 import optimization from './optimization.md';
 import endResult from './end-result.md';
+
+// Babel
+import babel from './babel.md';
+import whatIsBabel from './what-is-babel.md';
+import babelPlugins from './babel-plugins.md';
 
 // ES6 / ES7
 import es6Es7 from './es6-es7.md';
@@ -31,13 +41,14 @@ import promisesTopLevel from './promises-top-level.md';
 import links from './links.md';
 import thanks from './thanks.md';
 
-require('../../assets/markdown.scss');
-require('../../assets/highlight.css');
-
 const markdown = {
     title,
     toc,
+    webpack2,
     whatIsWebpack,
+    whatDoesItReplace,
+    whatDoesItDo,
+    howIsItInvoked,
     whatDoesItLookLike,
     stepByStep,
     configObject,
@@ -46,8 +57,12 @@ const markdown = {
     resolving,
     rules,
     plugins,
+    sourceMaps,
     optimization,
     endResult,
+    babel,
+    whatIsBabel,
+    babelPlugins,
     es6Es7,
     es6Es7Arrow,
     letConst,

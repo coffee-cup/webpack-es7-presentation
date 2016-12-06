@@ -2,7 +2,7 @@
 
 The Webpack configuration file is just JavaScript which exports an object.
 
-**`webpack.config.js`**
+`webpack.config.js`
 
 ```javascript
 var config = {

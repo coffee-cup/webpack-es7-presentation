@@ -11,16 +11,26 @@ $max-width: 48rem;
     h5,
     p,
     a,
-    ul {
+    ul,
+    li {
         line-height: 1.6;
 
         text-align: left;
     }
+
+    ul {
+        font-size: 1.212rem;
+    }
+
+    // li {
+    //     margin-bottom: 0.25rem;
+    // }
+
     pre.hljs {
         overflow: scroll;
 
         max-width: $max-width;
-        max-height: 70vh;
+        max-height: 50vh;
         padding: 1rem;
 
         text-align: left;
@@ -101,26 +111,11 @@ $max-width: 48rem;
             page-break-after: avoid;
         }
     }
-    html {
-        font-size: 12px;
-    }
-    @media screen and (min-width: 32rem) and (max-width: 48rem) {
-        html {
-            font-size: 15px;
-        }
-    }
-    @media screen and (min-width: 48rem) {
-        html {
-            font-size: 16px;
-        }
-    }
     body {
         line-height: 1.85;
     }
     p,
     .splendor-p {
-        font-size: 1rem;
-
         margin-bottom: 1.3rem;
     }
     h1,
@@ -177,8 +172,6 @@ $max-width: 48rem;
         max-width: 100%;
     }
     html {
-        font-size: 18px;
-
         max-width: 100%;
     }
     /* === A bit of a gross hack so we can have bleeding divs/blockquotes. */
