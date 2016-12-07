@@ -1,4 +1,4 @@
-## Source Maps
+## W7. Source Maps
 
 Source maps are useful to debug code in development. Webpack has [a few useful source maps options](https://webpack.js.org/configuration/devtool/#devtool)
 

@@ -30,9 +30,14 @@ import es6Es7 from './es6-es7.md';
 import es6Es7Arrow from './es6-es7-arrow.md';
 import letConst from './let-const.md';
 import shorthand from './shorthand.md';
+import destructuring from './destructuring.md';
+import templateStrings from './template-strings.md';
 
 // Async / Await
 import asyncAwait from './async-await.md';
+import whatIsAsyncAwait from './what-is-async-await.md';
+import asyncAwaitInstalls from './async-await-installs.md';
+import asyncAwaitWhenToUse from './async-await-when-to-use.md';
 import removingPromises from './removing-promises.md';
 import compiledVersion from './compiled-version.md';
 import promisesTopLevel from './promises-top-level.md';
@@ -67,7 +72,12 @@ const markdown = {
     es6Es7Arrow,
     letConst,
     shorthand,
+    destructuring,
+    templateStrings,
     asyncAwait,
+    whatIsAsyncAwait,
+    asyncAwaitInstalls,
+    asyncAwaitWhenToUse,
     removingPromises,
     compiledVersion,
     promisesTopLevel,

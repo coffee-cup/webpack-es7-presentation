@@ -13,6 +13,7 @@ p {
         h2,
         h3 {
             padding: 0;
+
             text-align: center;
         }
     }
@@ -23,14 +24,19 @@ p {
     code {
         border-radius: 2px;
     }
-
     pre {
-        background: #2D2D2D;
+        background: #2d2d2d;
     }
-
     code {
-        background: #FFFFFF;
+        background: #ffffff;
     }
+}
+
+.left {
+    float: left;
+
+    width: 49% !important;
+    margin: 0 .5%;
 }
 
 // Text Selection Colour

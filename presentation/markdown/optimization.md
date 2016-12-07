@@ -1,4 +1,4 @@
-## W7. Optimization
+## W8. Optimization
 
 Webpack comes with some [useful plugins](https://github.com/webpack/docs/wiki/optimization) for optimizing build files in production.
 

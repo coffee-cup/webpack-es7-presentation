@@ -1,6 +1,6 @@
 ## Babel Plugins
 
-Babel plugins need to be install as NPM dev dependencies
+Babel plugins need to be installed as NPM dev dependencies
 
 ```bash
 npm install --save-dev babel-preset-es2015
