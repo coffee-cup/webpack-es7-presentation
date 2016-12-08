@@ -1,6 +1,6 @@
 ## What is Webpack?
 
-Webpack is a module module bundler. It takes modules with dependencies and follow these dependencies to generate static assets, which can either be a single optimized file, or split into chunks.
+Webpack is a module bundler. It takes modules with dependencies and follow these dependencies to generate static assets, which can either be a single optimized file, or split into chunks.
 
 ### Features
 

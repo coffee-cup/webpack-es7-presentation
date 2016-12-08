@@ -1,5 +1,8 @@
 ## Arrow Functions
 
+Shorthand for defining functions where the context, `this`, is not rebound.
+
+
 ES5
 ```javascript
 this.ten = 10;
@@ -20,5 +23,3 @@ setTimeout(() => {
 }, 1000)
 // this.tenAdded = [11, 12, 13]
 ```
-
-The context, `this`, is not rebinded inside arrow functions.

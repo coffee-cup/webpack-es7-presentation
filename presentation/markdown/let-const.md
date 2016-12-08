@@ -12,7 +12,7 @@ a = 'lab' // Error
 b = 'beagle' // OK
 ```
 
-These new identifiers are not [hoisted](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html) like `var` is.
+These new identifiers are not [hoisted](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html) like `var` is. They are scoped to the block.
 
 ```javascript
 if (false) var x = 2;

@@ -28,6 +28,7 @@ import babelPlugins from './babel-plugins.md';
 // ES6 / ES7
 import es6Es7 from './es6-es7.md';
 import es6Es7Arrow from './es6-es7-arrow.md';
+import es6ArrowBad from './es6-arrow-bad.md';
 import letConst from './let-const.md';
 import shorthand from './shorthand.md';
 import destructuring from './destructuring.md';
@@ -70,6 +71,7 @@ const markdown = {
     babelPlugins,
     es6Es7,
     es6Es7Arrow,
+    es6ArrowBad,
     letConst,
     shorthand,
     destructuring,
